@@ -17,7 +17,7 @@ A V program to add an extension string to files.
 # Installation
 
 ```
-> git clone url
+> git clone https://github.com/vanillaiice/add_ext
 > cd add_ext
 > v .
 ```
