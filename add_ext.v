@@ -13,11 +13,8 @@ fn main() {
 }
 
 fn add_ext(f []string, ext string) {
-	mut files := f.clone()
-
 	for i := 0; i < f.len; i++ {
-		files[i] = [files[i], ext].join('.')
-		os.mv(f[i], files[i]) or {
+		os.mv(f[i], [f[i], ext].join('.')) or {
 			println(err)
 			exit(0)
 		}
