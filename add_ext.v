@@ -12,9 +12,9 @@ fn main() {
 	add_ext(args[1..args.index(ext)], ext)
 }
 
-fn add_ext(f []string, ext string) {
-	for i := 0; i < f.len; i++ {
-		os.mv(f[i], [f[i], ext].join('.')) or {
+fn add_ext(files []string, ext string) {
+	for f in files {
+		os.mv(f, [f, ext].join('.')) or {
 			println(err)
 			exit(0)
 		}
